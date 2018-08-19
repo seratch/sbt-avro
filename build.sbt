@@ -1,4 +1,4 @@
-name := "sbt-avro-1.8"
+name := "sbt-avro-1.7"
 organization := "com.cavorite"
 description := "Sbt plugin for compiling Avro sources"
 
@@ -8,12 +8,12 @@ sbtPlugin := true
 
 scalaVersion := appConfiguration.value.provider.scalaProvider.version
 scalacOptions in Compile ++= Seq("-deprecation")
-crossSbtVersions := Seq("0.13.17", "1.1.5")
+crossSbtVersions := Seq("0.13.17", "1.2.1")
 
 libraryDependencies ++= Seq(
   "io.spray" %%  "spray-json" % "1.3.2",
-  "org.apache.avro" % "avro" % "1.8.2",
-  "org.apache.avro" % "avro-compiler" % "1.8.2",
+  "org.apache.avro" % "avro" % "1.7.7",
+  "org.apache.avro" % "avro-compiler" % "1.7.7",
   "org.specs2" %% "specs2-core" % "3.9.4" % "test"
 )
 

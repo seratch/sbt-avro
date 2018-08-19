@@ -80,7 +80,7 @@ class SbtAvroSpec extends Specification {
     _eJavaFile.delete()
 
     for (schemaFile <- AvscFileSorter.sortSchemaFiles(sourceFiles)) {
-      SbtAvro.compileAvsc(schemaFile, targetDir, StringType.CharSequence, FieldVisibility.PUBLIC_DEPRECATED, true)
+      SbtAvro.compileAvsc(schemaFile, targetDir, StringType.CharSequence, FieldVisibility.PUBLIC_DEPRECATED)
     }
 
     aJavaFile.isFile must beTrue
